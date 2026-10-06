@@ -18,7 +18,13 @@ let svgAtual = "";
 // Chamado pelo Google depois do login: guarda o id_token.
 function aoEntrar(resposta) {
   idToken = resposta.credential;
-  mensagem.textContent = "Login feito com sucesso. Escolha um número e clique em Desenhar.";
+  let email = "";
+  try {
+    const dados = JSON.parse(atob(idToken.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+    email = dados.email || "";
+  } catch {}
+  mensagem.style.color = "#3fb950";
+  mensagem.textContent = "Login feito com sucesso" + (email ? " como " + email : "") + ". Escolha um número e clique em Desenhar.";
 }
 
 // Desenha o botão "Sign in with Google" quando a biblioteca estiver carregada.
@@ -41,6 +47,7 @@ window.addEventListener("load", iniciarGoogle);
 
 formulario.addEventListener("submit", async (evento) => {
   evento.preventDefault();
+  mensagem.style.color = "";
   mensagem.textContent = "";
 
   const numero = Number(campoNumero.value);
