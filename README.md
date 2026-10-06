@@ -22,6 +22,6 @@ Framework preset: `None`. Build command: vazio. Build output directory: `public`
 
 ## Identificação (preencha após o fork)
 
-Nome: 
-RA: 
-URL: https://
+Nome: Gabriel Benato Batistel Correa
+RA: 2026107891
+URL: https://desenho-assinado-gabriel-cws.pages.dev
