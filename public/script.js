@@ -3,7 +3,7 @@
 // Quem gera o SVG (e assina com o e-mail verificado) é a função /api/desenho.
 
 // O Client ID do Google é público e pode ficar no repositório.
-const GOOGLE_CLIENT_ID = "499170150715-fra7hc9hb34us6o5q8q4qb0fnmla19s4.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "1029740697662-bfoaca28mthoavgoko438b324laev6rc.apps.googleusercontent.com";
 
 const formulario = document.getElementById("formulario");
 const campoNumero = document.getElementById("numero");
